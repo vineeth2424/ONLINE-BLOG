@@ -10,8 +10,8 @@ var usersRouter = require('./app_server/routes/users');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'app_server','views'));
-app.set('view engine', 'jade');
+app.set('views', path.join(__dirname,'app_server' ,'views'));
+app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -38,5 +38,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-//teal-wide-eyed-caterpillar
 module.exports = app;
